@@ -19,6 +19,7 @@ public class SwingManager : MonoBehaviour
     private const float MIN_HEIGHT = 0.1f;
     private const float MAX_HEIGHT = 1f;
     private const float SLOWDOWN_MODIFIER = 0.95f;
+    private const float AIR_DRAG = 0.0005f;
     private const float MAX_ROTATION = 170f;
     [SerializeField] private float _currentSpeed = 0;
     [SerializeField] private float _targetSpeed = 0;
@@ -26,7 +27,7 @@ public class SwingManager : MonoBehaviour
     [SerializeField] private float _targetMaxHeight = 0;
     private FixedTimer _SwingPositionTimer = new();
     private FixedTimer _LerpTimer = new();
-    private float _lerpTime = 1f; // Seconds
+    private float _lerpTime = 2f; // Seconds
     private float _swingStep = 0f;
 
     public float swingPosition = 0;
@@ -41,7 +42,14 @@ public class SwingManager : MonoBehaviour
             UpdateSwingStep();
             UpdateSwingView();
             LerpToTargetSpeed();
+            AddDrag();
         }
+    }
+
+    private void AddDrag()
+    {
+        _targetSpeed = Math.Max(_targetSpeed - AIR_DRAG, MIN_SPEED);
+        _targetMaxHeight = Math.Max(_targetMaxHeight - AIR_DRAG/2, MIN_HEIGHT);
     }
 
     private void UpdateSwingStep()
