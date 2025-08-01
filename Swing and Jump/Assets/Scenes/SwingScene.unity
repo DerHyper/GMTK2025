@@ -314,7 +314,6 @@ GameObject:
   m_Component:
   - component: {fileID: 461306459}
   - component: {fileID: 461306460}
-  - component: {fileID: 461306461}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -350,29 +349,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countDownManager: {fileID: 820506227}
+  girlSittingSprite: {fileID: 158818816}
+  girlStartingPrefab: {fileID: 515953074839650, guid: ba52634ee3caaaa4c8fb1a9fb4da221b, type: 3}
   state: 0
---- !u!95 &461306461
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461306458}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ab4ce3ede7a716d4689b8e8d42bb052b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &533190654
 GameObject:
   m_ObjectHideFlags: 0

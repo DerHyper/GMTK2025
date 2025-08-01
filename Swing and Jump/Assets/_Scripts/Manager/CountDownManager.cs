@@ -42,7 +42,7 @@ public class CountDownManager : MonoBehaviour
             current++;
         }
 
-        if (current >= countDownNumbers.Count-1)
+        if (current >= countDownNumbers.Count)
         {
             EndCountDown();
         }

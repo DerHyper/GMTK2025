@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private CountDownManager countDownManager;
     [SerializeField]
-    private GameManager girlSittingSprite;
+    private GameObject girlSittingSprite;
     [SerializeField]
-    private GameManager girlStartingPrefab;
+    private GameObject girlStartingPrefab;
 
     public enum GameState
     {
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     internal void startFlying()
     {
-        girlSittingSprite.enabled = false;
+        girlSittingSprite.SetActive(false);
         GameObject.Instantiate(girlStartingPrefab, girlSittingSprite.transform.position, girlSittingSprite.transform.rotation);
     }
 }
