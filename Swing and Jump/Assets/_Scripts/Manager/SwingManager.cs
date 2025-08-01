@@ -52,13 +52,7 @@ public class SwingManager : MonoBehaviour
 
     public void ActionPressed()
     {
-        if (!_SwingPositionTimer.IsRunning())
-        {
-            KickStart();
-            _SwingPositionTimer.Start();
-
-        }
-        else if (IsInRange(GetSwingPosition(), GetCritSwingRange()))
+        if (IsInRange(GetSwingPosition(), GetCritSwingRange()))
         {
             IncreaseSpeedCrit();
         }
@@ -72,8 +66,12 @@ public class SwingManager : MonoBehaviour
         }
     }
 
-    private void KickStart()
+    /// <summary>
+    /// Starts the _SwingPositionTimer and starts swinging the swing
+    /// </summary>
+    public void KickStart()
     {
+        _SwingPositionTimer.Start();
         _targetSpeed = MIN_SPEED;
         _targetMaxHeight = MIN_HEIGHT;
     }

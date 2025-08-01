@@ -12,7 +12,18 @@ public class InputManager : MonoBehaviour
     {
         if (context.performed)
         {
-            swingManager.ActionPressed();
+            switch (GameManager.Instance.state)
+            {
+                case GameManager.GameState.BeforeSwinging:
+                    swingManager.KickStart();
+                    GameManager.Instance.ChangeState(GameManager.GameState.Swinging);
+                    break;
+                case GameManager.GameState.Swinging:
+                    swingManager.ActionPressed();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
