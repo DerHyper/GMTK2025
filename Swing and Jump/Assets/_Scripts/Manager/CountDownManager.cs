@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 
-public class CountDownManager
+public class CountDownManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject countdownPrefab;
     [SerializeField]
     private Transform NumberPosition;
     private FixedTimer _timer = new();
-    
+
     private bool _timerHasStarted = false;
     private bool _countHasStarted = false;
 
@@ -41,10 +41,29 @@ public class CountDownManager
             showCountDownNumber(countDownNumbers[current]);
             current++;
         }
+
+        if (current >= countDownNumbers.Count-1)
+        {
+            EndCountDown();
+        }
+        timeScineLastCountdownUpdate += Time.deltaTime;
     }
 
-    private void showCountDownNumber(int number) {
+    private void EndCountDown()
+    {
+        _timerHasStarted = false;
+        GameManager.Instance.startFlying();
+    }
+
+    private void showCountDownNumber(int number)
+    {
         GameObject numberObj = GameObject.Instantiate(countdownPrefab, NumberPosition.position, NumberPosition.rotation, NumberPosition);
         numberObj.GetComponent<CountDownNumber>().Init(number);
+    }
+
+    public void StartCountDown()
+    {
+        _timer.Start();
+        _timerHasStarted = true;
     }
 }

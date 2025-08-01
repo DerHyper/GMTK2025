@@ -1,7 +1,16 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    private CountDownManager countDownManager;
+    [SerializeField]
+    private GameManager girlSittingSprite;
+    [SerializeField]
+    private GameManager girlStartingPrefab;
+
     public enum GameState
     {
         BeforeSwinging,
@@ -27,5 +36,16 @@ public class GameManager : MonoBehaviour
     public void ChangeState(GameState newState)
     {
         state = newState;
+
+        if (newState == GameState.Swinging)
+        {
+            countDownManager.StartCountDown();
+        }
+    }
+
+    internal void startFlying()
+    {
+        girlSittingSprite.enabled = false;
+        GameObject.Instantiate(girlStartingPrefab, girlSittingSprite.transform.position, girlSittingSprite.transform.rotation);
     }
 }
