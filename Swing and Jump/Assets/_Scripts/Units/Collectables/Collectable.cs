@@ -15,6 +15,7 @@ public abstract class Collectable : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Collect();
+            Destroy(gameObject);
         }
 
         if (other.gameObject.tag == "DestroyCollectables")
