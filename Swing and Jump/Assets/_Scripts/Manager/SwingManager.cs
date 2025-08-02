@@ -76,7 +76,7 @@ public class SwingManager : MonoBehaviour
     public void StartAfterJump()
     {
         _afterJump = true;
-        // TODO: Add force for flying
+        GameData.Instance.AddFule(_currentSpeed + _currentMaxHeight);
     }
 
     private void AddDrag()

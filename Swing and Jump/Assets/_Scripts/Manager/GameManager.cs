@@ -50,5 +50,6 @@ public class GameManager : MonoBehaviour
         girlSittingSprite.SetActive(false);
         GameObject.Instantiate(girlStartingPrefab, girlSittingSprite.transform.position, girlSittingSprite.transform.rotation);
         swingManager.StartAfterJump();
+        MySceneManager.Instance.StartFlyingScene();
     }
 }
