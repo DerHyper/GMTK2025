@@ -17,7 +17,10 @@ public abstract class Collectable : MonoBehaviour
             Collect();
         }
 
-        Destroy(gameObject);
+        if (other.gameObject.tag == "DestroyCollectables")
+        {
+            Destroy(gameObject);
+        }
     }
 
     public abstract void Collect();

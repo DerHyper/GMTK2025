@@ -12,7 +12,7 @@ public class FixedTimer
         _isTimerRunning = true;
     }
 
-    public void Update()
+    private void Update()
     {
         _currentTime = Time.time - _timerStart;
     }
@@ -24,6 +24,7 @@ public class FixedTimer
 
     public float GetTime()
     {
+        Update();
         return _currentTime;
     }
 }

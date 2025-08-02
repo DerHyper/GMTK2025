@@ -39,7 +39,6 @@ public class SwingManager : MonoBehaviour
     {
         if (_SwingPositionTimer.IsRunning())
         {
-            _SwingPositionTimer.Update();
             UpdateSwingStep();
             UpdateSwingView();
             LerpToTargetSpeed();
@@ -100,7 +99,6 @@ public class SwingManager : MonoBehaviour
 
     private void LerpToTargetSpeed()
     {
-        _LerpTimer.Update();
         float currentPercent = _LerpTimer.GetTime() / _lerpTime;
         _currentSpeed = Mathf.Lerp(_currentSpeed, _targetSpeed, currentPercent);
         _currentMaxHeight = Mathf.Lerp(_currentMaxHeight, _targetMaxHeight, currentPercent);
@@ -128,7 +126,6 @@ public class SwingManager : MonoBehaviour
 
     private void UpdateSwingView()
     {
-        _SwingPositionTimer.Update();
         swingPosition = GetSwingPosition();
         Vector3 newRotation = new(0, 0, swingPosition * MAX_ROTATION);
         _swingSeat.rotation = Quaternion.Euler(newRotation);

@@ -28,7 +28,6 @@ public class CountDownManager : MonoBehaviour
             return;
         }
 
-        _timer.Update();
         float time = _timer.GetTime();
         if (time > countDownStartTimer && !_countHasStarted)
         {
