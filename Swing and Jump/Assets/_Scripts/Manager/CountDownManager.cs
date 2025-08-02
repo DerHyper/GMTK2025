@@ -17,6 +17,7 @@ public class CountDownManager : MonoBehaviour
     float countDownStartTimer = 10f;
 
     float timeScineLastCountdownUpdate = 0f;
+    float endCountdownOffset = 0.2f;
     List<int> countDownNumbers = new List<int> { 5, 4, 3, 2, 1, 0 };
     int current = 0;
 
@@ -44,14 +45,14 @@ public class CountDownManager : MonoBehaviour
 
         if (current >= countDownNumbers.Count)
         {
-            EndCountDown();
+            _timerHasStarted = false;
+            Invoke(nameof(EndCountDown), endCountdownOffset);
         }
         timeScineLastCountdownUpdate += Time.deltaTime;
     }
 
     private void EndCountDown()
     {
-        _timerHasStarted = false;
         GameManager.Instance.startFlying();
     }
 

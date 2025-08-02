@@ -20,6 +20,7 @@ public class SwingManager : MonoBehaviour
     private const float MAX_HEIGHT = 1f;
     private const float SLOWDOWN_MODIFIER = 0.95f;
     private const float AIR_DRAG = 0.0005f;
+    private const float AIR_DRAG_AFTER_JUMP = 0.03f;
     private const float MAX_ROTATION = 170f;
     [SerializeField] private float _currentSpeed = 0;
     [SerializeField] private float _targetSpeed = 0;
@@ -29,9 +30,9 @@ public class SwingManager : MonoBehaviour
     private FixedTimer _LerpTimer = new();
     private float _lerpTime = 2f; // Seconds
     private float _swingStep = 0f;
+    private bool _afterJump = false;
 
     public float swingPosition = 0;
-
 
 
     private void FixedUpdate()
@@ -44,18 +45,6 @@ public class SwingManager : MonoBehaviour
             LerpToTargetSpeed();
             AddDrag();
         }
-    }
-
-    private void AddDrag()
-    {
-        _targetSpeed = Math.Max(_targetSpeed - AIR_DRAG, MIN_SPEED);
-        _targetMaxHeight = Math.Max(_targetMaxHeight - AIR_DRAG/2, MIN_HEIGHT);
-    }
-
-    private void UpdateSwingStep()
-    {
-        float speedModifier = Math.Min(_currentSpeed, MAX_SPEED);
-        _swingStep += Time.fixedDeltaTime * speedModifier;
     }
 
     public void ActionPressed()
@@ -82,6 +71,31 @@ public class SwingManager : MonoBehaviour
         _SwingPositionTimer.Start();
         _targetSpeed = MIN_SPEED;
         _targetMaxHeight = MIN_HEIGHT;
+    }
+
+    public void StartAfterJump()
+    {
+        _afterJump = true;
+        // TODO: Add force for flying
+    }
+
+    private void AddDrag()
+    {
+        if (_afterJump)
+        {
+            _targetSpeed = Math.Max(_targetSpeed - AIR_DRAG_AFTER_JUMP, MIN_SPEED);
+            _targetMaxHeight = Math.Max(_targetMaxHeight - AIR_DRAG_AFTER_JUMP / 2, MIN_HEIGHT);
+            return;
+        }
+
+        _targetSpeed = Math.Max(_targetSpeed - AIR_DRAG, MIN_SPEED);
+        _targetMaxHeight = Math.Max(_targetMaxHeight - AIR_DRAG / 2, MIN_HEIGHT);
+    }
+
+    private void UpdateSwingStep()
+    {
+        float speedModifier = Math.Min(_currentSpeed, MAX_SPEED);
+        _swingStep += Time.fixedDeltaTime * speedModifier;
     }
 
     private void LerpToTargetSpeed()

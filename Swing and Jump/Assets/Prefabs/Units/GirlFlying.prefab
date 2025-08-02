@@ -101,5 +101,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: -1, y: 1, z: 0}
-  torque: {x: 0, y: 0, z: 20}
-  directionForce: 4
+  torque: {x: 0, y: 0, z: 40}
+  directionForce: 5

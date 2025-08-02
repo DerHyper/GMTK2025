@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private CountDownManager countDownManager;
     [SerializeField]
+    private SwingManager swingManager;
+    [SerializeField]
     private GameObject girlSittingSprite;
     [SerializeField]
     private GameObject girlStartingPrefab;
@@ -47,5 +49,6 @@ public class GameManager : MonoBehaviour
     {
         girlSittingSprite.SetActive(false);
         GameObject.Instantiate(girlStartingPrefab, girlSittingSprite.transform.position, girlSittingSprite.transform.rotation);
+        swingManager.StartAfterJump();
     }
 }
