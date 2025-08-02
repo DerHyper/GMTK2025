@@ -1900,10 +1900,17 @@ MonoBehaviour:
   - {fileID: 2942151931647490458, guid: 1a0dc4e5a07c1dd498a3232bbfc1aa92, type: 3}
   - {fileID: 2942151931647490458, guid: 0faa788c6af40ba49b286b1651f7c8cb, type: 3}
   starPatternIntervalGrowth: -0.5
-  starPatternSpawnChance: 0.3
-  meteorPatterns: []
+  starPatternSpawnChance: 0.5
+  meteorPatterns:
+  - {fileID: 2942151931647490458, guid: 6b2b97323d013df459bdf28a72b53792, type: 3}
+  - {fileID: 2942151931647490458, guid: a5ffa218100392b41b0a65c095ad9164, type: 3}
+  - {fileID: 2942151931647490458, guid: 9efbc58cf4d9cc3419d1412323bc18c2, type: 3}
+  - {fileID: 2942151931647490458, guid: 3f2315bcd006ed6469ca9fa2331d63f1, type: 3}
+  - {fileID: 2942151931647490458, guid: f710d0604ab374748b71b52af1a01abb, type: 3}
+  - {fileID: 2942151931647490458, guid: b20e48fc209c67440b829a3739765d17, type: 3}
+  - {fileID: 2942151931647490458, guid: 9727b517a2c5c7841acb2027cb4e8ec3, type: 3}
   meteorPatternIntervalGrowth: -0.5
-  meteorPatternSpawnChance: 0.3
+  meteorPatternSpawnChance: 0.6
 --- !u!1 &1905273821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,7 +1957,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1958809152
 Transform:
   m_ObjectHideFlags: 0

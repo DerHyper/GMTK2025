@@ -19,5 +19,12 @@ public class CollectableManager : MonoBehaviour
     public void CollectStars(int stars)
     {
         GameData.Instance.AddStars(stars);
+        // TODO: Fule
+    }
+
+    public void CollectMeteor()
+    {
+        GameData.Instance.AddMeteor();
+        // TODO: Lose Fule, Damage
     }
 }
