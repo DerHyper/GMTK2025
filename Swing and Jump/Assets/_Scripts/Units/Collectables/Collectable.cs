@@ -5,7 +5,7 @@ public abstract class Collectable : MonoBehaviour
 {
     public float speed = 10;
 
-    private void Update() {
+    protected void Update() {
         Vector3 nextStep = Vector3.down * Time.deltaTime * speed;
         gameObject.transform.position += nextStep;
     }

@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  TelegraphPrefab: {fileID: 4753523299395157162, guid: b550d887136cf4c49a095e339904fc23, type: 3}
 --- !u!95 &8107170208759659174
 Animator:
   serializedVersion: 7
