@@ -6,6 +6,7 @@ public class GameData : MonoBehaviour
     public float fule;
     private float distance; // KM
     private int stars;
+    private int meteors;
 
     public static GameData Instance;
 
@@ -21,7 +22,8 @@ public class GameData : MonoBehaviour
         }
     }
 
-    private void Start() {
+    private void Start()
+    {
         ResetData();
     }
 
@@ -65,5 +67,15 @@ public class GameData : MonoBehaviour
     public float GetStars()
     {
         return stars;
+    }
+
+    public void AddMeteor()
+    {
+        meteors++;
+    }
+
+    public float GetMeteor()
+    {
+        return meteors;
     }
 }
