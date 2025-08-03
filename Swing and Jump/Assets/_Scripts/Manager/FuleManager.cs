@@ -42,7 +42,7 @@ public class FuleManager : MonoBehaviour
     private void EndScene()
     {
         isEmpty = true;
-        GameManager.Instance.StartGameEnd();
+        GameManager.Instance.StopFlying();
     }
 
     private void UpdateFuleMask()
