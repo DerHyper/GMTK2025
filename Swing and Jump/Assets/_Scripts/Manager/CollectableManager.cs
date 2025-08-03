@@ -4,7 +4,7 @@ public class CollectableManager : MonoBehaviour
 {
     public static CollectableManager Instance;
     public float MeteorHitFuleLoss = 10;
-    public float StarHitFuleGain = 1;
+    public float StarHitFuleGain = 0.1f;
 
     private void Awake()
     {

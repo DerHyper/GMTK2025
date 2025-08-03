@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeteorHitFuleLoss: 10
-  StarHitFuleGain: 1
+  StarHitFuleGain: 0.1
 --- !u!1 &218442218
 GameObject:
   m_ObjectHideFlags: 0
