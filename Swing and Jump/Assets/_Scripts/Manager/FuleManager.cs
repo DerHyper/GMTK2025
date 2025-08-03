@@ -8,6 +8,19 @@ public class FuleManager : MonoBehaviour
     private float maxFule = 100;
     public float fuleConsume = 1;
     public Transform fuleMask;
+    public static FuleManager Instance;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +32,10 @@ public class FuleManager : MonoBehaviour
     {
         AddFule(-fuleConsume * Time.deltaTime);
         UpdateFuleMask();
+        if (fule <= 0)
+        {
+            GameManager.Instance.StopFlying();
+        }
     }
 
     private void UpdateFuleMask()
