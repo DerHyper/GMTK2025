@@ -29,6 +29,8 @@ public class SpawnManager : MonoBehaviour
     private float meteorPatternIntervalMin = 1;
     public float meteorPatternIntervalGrowth = -0.5f;
     public float meteorPatternSpawnChance = 0.6f;
+    private float meteorStartTime = 15;
+    private bool startMeteor = false;
 
 
     private const float UPDATE_INTERVALS_TIME = 1;
@@ -37,9 +39,15 @@ public class SpawnManager : MonoBehaviour
     {
         starPatternTimer.Start();
         starPatternInterval = new(starPatternIntervalMax, starPatternIntervalMin, starPatternIntervalMax, starPatternIntervalGrowth);
+        InvokeRepeating(nameof(UpdateIntervals), UPDATE_INTERVALS_TIME, UPDATE_INTERVALS_TIME);
+        Invoke(nameof(SartMeteors), meteorStartTime);
+    }
+
+    private void SartMeteors()
+    {
+        startMeteor = true;
         meteorPatternTimer.Start();
         meteorPatternInterval = new(meteorPatternIntervalMax, meteorPatternIntervalMin, meteorPatternIntervalMax, meteorPatternIntervalGrowth);
-        InvokeRepeating(nameof(UpdateIntervals), UPDATE_INTERVALS_TIME, UPDATE_INTERVALS_TIME);
     }
 
     // Update is called once per frame
@@ -50,7 +58,7 @@ public class SpawnManager : MonoBehaviour
             TrySpawnPattern(starPatterns, starPatternSpawnChance);
             starPatternTimer.Start();
         }
-        if (meteorPatternTimer.GetTime() >= starPatternInterval.Get())
+        if (startMeteor && meteorPatternTimer.GetTime() >= starPatternInterval.Get())
         {
             TrySpawnPattern(meteorPatterns, meteorPatternSpawnChance);
             meteorPatternTimer.Start();
@@ -81,6 +89,10 @@ public class SpawnManager : MonoBehaviour
     private void UpdateIntervals()
     {
         starPatternInterval.UpdateGrow();
-        meteorPatternInterval.UpdateGrow();
+
+        if (startMeteor)
+        {
+            meteorPatternInterval.UpdateGrow();
+        }
     }
 }
