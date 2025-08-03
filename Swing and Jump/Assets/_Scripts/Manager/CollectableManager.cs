@@ -21,12 +21,14 @@ public class CollectableManager : MonoBehaviour
     public void CollectStars(int stars)
     {
         GameData.Instance.AddStars(stars);
-        FuleManager.Instance.AddFule(stars*StarHitFuleGain);
+        FuleManager.Instance.AddFule(stars * StarHitFuleGain);
+        AudioManager.Instance.PlayStar();
     }
 
     public void CollectMeteor()
     {
         GameData.Instance.AddMeteor();
         FuleManager.Instance.AddFule(-MeteorHitFuleLoss);
+        AudioManager.Instance.PlayMeteor();
     }
 }
