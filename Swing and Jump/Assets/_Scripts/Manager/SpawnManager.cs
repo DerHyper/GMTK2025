@@ -15,7 +15,7 @@ public class SpawnManager : MonoBehaviour
     private List<GameObject> starPatterns;
     private GrowingNumber starPatternInterval;
     private FixedTimer starPatternTimer = new();
-    private float starPatternIntervalMax = 5;
+    private float starPatternIntervalMax = 4;
     private float starPatternIntervalMin = 2;
     public float starPatternIntervalGrowth = -0.5f;
     public float starPatternSpawnChance = 0.5f;
