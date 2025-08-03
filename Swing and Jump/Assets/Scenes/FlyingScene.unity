@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fule: 20
-  distance: 3490
+  distance: 0
 --- !u!1 &134155744
 GameObject:
   m_ObjectHideFlags: 0
