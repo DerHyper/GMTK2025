@@ -75,9 +75,14 @@ public class MySceneManager : MonoBehaviour
         SceneManager.LoadScene(currentScene);
     }
 
+    public void StartIntro()
+    {
+        
+    }
+
     internal void StartSwingingScene()
     {
-        StartCoroutine(StartFadeIn()); 
+        StartCoroutine(StartFadeIn());
     }
 
     internal void StartEndingScene()

@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,7 +7,9 @@ using UnityEngine.InputSystem;
 public class SwingManager : MonoBehaviour
 {
     [SerializeField] private Transform _swingSeat;
-    private const float GOOD_AREA_MODIFIER = 0.9f;
+    [SerializeField] private Transform _barMarker;
+    [SerializeField] private float _barMarkerMultiplieer;
+    private const float GOOD_AREA_MODIFIER = 0.8f;
     private const float GOOD_AREA_MIN = 0.1f;
     private const float GOOD_INCREASE = 0.02f;
     private const float GOOD_INCREASE_MODIFIER = 1.05f;
@@ -35,15 +38,25 @@ public class SwingManager : MonoBehaviour
     public float swingPosition = 0;
 
 
+
     private void FixedUpdate()
     {
         if (_SwingPositionTimer.IsRunning())
         {
             UpdateSwingStep();
             UpdateSwingView();
+            UpdateMarkerView();
             LerpToTargetSpeed();
             AddDrag();
         }
+    }
+
+    private void UpdateMarkerView()
+    {
+        Vector3 current = _barMarker.transform.position;
+        float nextY = GetSwingPosition() * _barMarkerMultiplieer / (float) Math.Max(MIN_HEIGHT, Math.Min(_currentMaxHeight, MAX_HEIGHT));
+        Vector3 next = new(nextY, current.y, current.z);
+        _barMarker.transform.position = next;
     }
 
     public void ActionPressed()
@@ -75,7 +88,8 @@ public class SwingManager : MonoBehaviour
     public void StartAfterJump()
     {
         _afterJump = true;
-        GameData.Instance.AddFule(_currentSpeed + _currentMaxHeight);
+        float fule = (_currentSpeed + _currentMaxHeight) * 4 + 15;
+        GameData.Instance.SetFule(fule);
     }
 
     private void AddDrag()
@@ -152,13 +166,13 @@ public class SwingManager : MonoBehaviour
 
     private (float min, float positiveMin) GetGoodSwingRange()
     {
-        float min = Math.Max(-_currentMaxHeight,-MAX_HEIGHT) * GOOD_AREA_MODIFIER + GOOD_AREA_MIN;
+        float min = Math.Max(-_currentMaxHeight,-MAX_HEIGHT) * GOOD_AREA_MODIFIER;
         return (min, 0);
     }
 
     private (float min, float positiveMin) GetCritSwingRange()
     {
-        float min = Math.Max(-_currentMaxHeight, -MAX_HEIGHT) * CRIT_AREA_MODIFIER + CRIT_AREA_MIN;
+        float min = Math.Max(-_currentMaxHeight, -MAX_HEIGHT) * CRIT_AREA_MODIFIER;
         return (min, 0);
     }
 }
