@@ -6,11 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/FlyingScene.unity
-    guid: d0dc508756baeea408e2ccd846730e8d
+    path: Assets/Scenes/StartScene.unity
+    guid: a8d2206f4fe56564197f3335260aaca1
   - enabled: 1
     path: Assets/Scenes/SwingScene.unity
     guid: c926162493615ef498f57b1c407fcff9
+  - enabled: 1
+    path: Assets/Scenes/FlyingScene.unity
+    guid: d0dc508756baeea408e2ccd846730e8d
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: a1f30f2ace990754aa4a48342ef4fa53
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
