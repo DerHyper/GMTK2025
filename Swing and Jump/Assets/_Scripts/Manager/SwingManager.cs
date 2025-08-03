@@ -61,13 +61,19 @@ public class SwingManager : MonoBehaviour
 
     public void ActionPressed()
     {
+        if (_afterJump)
+        {
+            return;
+        }
         if (IsInRange(GetSwingPosition(), GetCritSwingRange()))
         {
             IncreaseSpeedCrit();
+            AudioManager.Instance.PlaySwingCrit();
         }
         else if (IsInRange(GetSwingPosition(), GetGoodSwingRange()))
         {
             IncreaseSpeedGood();
+            AudioManager.Instance.PlaySwingGood();
         }
         else
         {
