@@ -9,6 +9,7 @@ public class FuleManager : MonoBehaviour
     public float fuleConsume = 1;
     public Transform fuleMask;
     public static FuleManager Instance;
+    private bool isEmpty = false;
 
     private void Awake()
     {
@@ -32,8 +33,9 @@ public class FuleManager : MonoBehaviour
     {
         AddFule(-fuleConsume * Time.deltaTime);
         UpdateFuleMask();
-        if (fule <= 0)
+        if (fule <= 0 && !isEmpty)
         {
+            isEmpty = true;
             GameManager.Instance.StopFlying();
         }
     }

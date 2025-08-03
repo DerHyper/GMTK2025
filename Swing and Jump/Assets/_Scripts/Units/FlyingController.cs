@@ -10,10 +10,18 @@ public class FlyingController : MonoBehaviour
     private Vector3 _offsetFromCamera = new(0, 0, 1);
     private float _deadZoneMovement = 0.01f;
     private Vector2 _playZone = new(5, 3);
+    private bool canFly = true;
 
     private void Update()
     {
-        MoveToMousePosition();
+        if (canFly)
+        {
+            MoveToMousePosition();
+        }
+        else
+        {
+            gameObject.transform.position += new Vector3(0, -1*Time.deltaTime, 0);
+        }
     }
 
     private void MoveToMousePosition()
@@ -64,5 +72,10 @@ public class FlyingController : MonoBehaviour
         bool inX = Math.Abs(target.x) < _playZone.x;
         bool inY = Math.Abs(target.y) < _playZone.y;
         return inX && inY;
+    }
+
+    internal void StopFlying()
+    {
+        canFly = false;
     }
 }

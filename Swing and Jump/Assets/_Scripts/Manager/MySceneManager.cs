@@ -26,6 +26,8 @@ public class MySceneManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        currentScene = SceneManager.GetActiveScene().name;
     }
 
     public void StartFlyingScene()
@@ -53,5 +55,10 @@ public class MySceneManager : MonoBehaviour
                 break;
         }
         SceneManager.LoadScene(currentScene);
+    }
+
+    internal void StartSwingingScene()
+    {
+        StartCoroutine(StartFadeIn());
     }
 }
