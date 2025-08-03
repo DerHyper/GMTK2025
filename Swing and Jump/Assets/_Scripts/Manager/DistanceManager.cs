@@ -1,15 +1,19 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class DistanceManager : MonoBehaviour
 {
     public float totalDistance;
+    public float totalDistanceLastFrame;
     public float goalDistance;
     public float distancePerSecond;
     public static DistanceManager Instance;
     public TMP_Text distanceUI;
     public bool goalReached = false;
+    public List<Seight> seights;
+    public Transform SeightSpawn;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -40,6 +44,21 @@ public class DistanceManager : MonoBehaviour
             goalReached = true;
             GameManager.Instance.StartGameEnd();
         }
+
+        foreach (var seight in seights)
+        {
+            if (totalDistanceLastFrame < seight.distance && totalDistance > seight.distance)
+            {
+                SeightDistanceReached(seight);
+            }
+        }
+
+        totalDistanceLastFrame = totalDistance;
+    }
+
+    private void SeightDistanceReached(Seight seight)
+    {
+        Instantiate(seight.prefab, SeightSpawn.position, Quaternion.identity);
     }
 
     private void UpdateDistanceUI()
