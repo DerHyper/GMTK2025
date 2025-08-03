@@ -1663,7 +1663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalDistance: 0
   totalDistanceLastFrame: 0
-  goalDistance: 3000
+  goalDistance: 3500
   distancePerSecond: 10
   distanceUI: {fileID: 1538490385}
   goalReached: 0
@@ -2582,7 +2582,7 @@ Transform:
   m_GameObject: {fileID: 1878735731}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: -0.044870485}
+  m_LocalPosition: {x: 0, y: 4, z: -0.044870485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
