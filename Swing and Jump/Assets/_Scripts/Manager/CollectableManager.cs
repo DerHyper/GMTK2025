@@ -3,6 +3,8 @@ using UnityEngine;
 public class CollectableManager : MonoBehaviour
 {
     public static CollectableManager Instance;
+    public float MeteorHitFuleLoss = 10;
+    public float StarHitFuleGain = 1;
 
     private void Awake()
     {
@@ -19,12 +21,12 @@ public class CollectableManager : MonoBehaviour
     public void CollectStars(int stars)
     {
         GameData.Instance.AddStars(stars);
-        // TODO: Fule
+        FuleManager.Instance.AddFule(stars*StarHitFuleGain);
     }
 
     public void CollectMeteor()
     {
         GameData.Instance.AddMeteor();
-        // TODO: Lose Fule, Damage
+        FuleManager.Instance.AddFule(-MeteorHitFuleLoss);
     }
 }

@@ -52,4 +52,14 @@ public class GameManager : MonoBehaviour
         swingManager.StartAfterJump();
         MySceneManager.Instance.StartFlyingScene();
     }
+
+    public void StopFlying()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void StartGameEnd()
+    {
+        throw new NotImplementedException();
+    }
 }

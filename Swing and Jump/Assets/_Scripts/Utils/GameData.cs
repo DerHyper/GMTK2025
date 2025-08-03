@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class GameData : MonoBehaviour
 {
-    public float fule;
-    private float distance; // KM
-    private int stars;
-    private int meteors;
+    public float fule = 20;
+    private float distance = 0; // KM
+    private int stars = 0;
+    private int meteors = 0;
 
     public static GameData Instance;
 
@@ -20,18 +20,6 @@ public class GameData : MonoBehaviour
         {
             Instance = this;
         }
-    }
-
-    private void Start()
-    {
-        ResetData();
-    }
-
-    private void ResetData()
-    {
-        fule = 20;
-        distance = 0;
-        stars = 0;
     }
 
     public void SetFule(float fule)
