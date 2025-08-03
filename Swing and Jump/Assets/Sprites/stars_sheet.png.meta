@@ -1,46 +1,52 @@
 fileFormatVersion: 2
-guid: a5f1715c3a6df224abaabb19ba71d6ad
+guid: 707acba6f9468164db106603f8981ee4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5985859897263423718
-    second: UI-Sprites_0
+      213: -3880783548999385479
+    second: stars_sheet_0
   - first:
-      213: 3443897719889064933
-    second: UI-Sprites_1
+      213: -4209174555596082298
+    second: stars_sheet_1
   - first:
-      213: 2248187200630164148
-    second: UI-Sprites_2
+      213: 5680138253481413215
+    second: stars_sheet_2
   - first:
-      213: 8681782458404323373
-    second: UI-Sprites_3
+      213: 6432777346895321713
+    second: stars_sheet_3
   - first:
-      213: -54033413917725231
-    second: UI-Sprites_4
+      213: 8795387877306836529
+    second: stars_sheet_4
   - first:
-      213: -3743011225584866354
-    second: UI-Sprites_5
+      213: 2829920081962616566
+    second: stars_sheet_5
   - first:
-      213: 3991092192059484088
-    second: UI-Sprites_6
+      213: -4798756009285604454
+    second: stars_sheet_6
   - first:
-      213: 1969797147291875838
-    second: UI-Sprites_7
+      213: -4448326090981365968
+    second: stars_sheet_7
   - first:
-      213: 4223873230705992415
-    second: UI-Sprites_8
+      213: -2091405908221864632
+    second: stars_sheet_8
   - first:
-      213: -7604743242007812454
-    second: UI-Sprites_9
+      213: 1870131566955502336
+    second: stars_sheet_9
   - first:
-      213: 294009451281665927
-    second: UI-Sprites_10
+      213: -2697192427842512584
+    second: stars_sheet_10
   - first:
-      213: -8730628164378682910
-    second: UI-Sprites_11
+      213: 3410508736253744503
+    second: stars_sheet_11
   - first:
-      213: 1807455620509854865
-    second: UI-Sprites_12
+      213: -6071779801869733367
+    second: stars_sheet_12
+  - first:
+      213: 6293520097095454439
+    second: stars_sheet_13
+  - first:
+      213: -4332348379799192590
+    second: stars_sheet_14
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -136,11 +142,77 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI-Sprites_0
+      name: stars_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97e36b76cefa42ac0800000000000000
+      internalID: -3880783548999385479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6833518fa020695c0800000000000000
+      internalID: -4209174555596082298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a0ed995a7e3de40800000000000000
+      internalID: 5680138253481413215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars_sheet_3
       rect:
         serializedVersion: 2
         x: 96
-        y: 148
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -151,18 +223,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a1f7b5c4324fdeca0800000000000000
-      internalID: -5985859897263423718
+      spriteID: 17a10e82ae0d54950800000000000000
+      internalID: 6432777346895321713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI-Sprites_1
+      name: stars_sheet_4
       rect:
         serializedVersion: 2
         x: 128
-        y: 148
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -173,18 +245,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e3f3cccabe2bcf20800000000000000
-      internalID: 3443897719889064933
+      spriteID: 136a6a8acae7f0a70800000000000000
+      internalID: 8795387877306836529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI-Sprites_2
+      name: stars_sheet_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 148
+        x: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -195,18 +267,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4ba042af85a233f10800000000000000
-      internalID: 2248187200630164148
+      spriteID: 6f6402c2255e54720800000000000000
+      internalID: 2829920081962616566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI-Sprites_3
+      name: stars_sheet_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 148
+        x: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -217,18 +289,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d20486ad523eb7870800000000000000
-      internalID: 8681782458404323373
+      spriteID: a9ba2ce95d4676db0800000000000000
+      internalID: -4798756009285604454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI-Sprites_4
+      name: stars_sheet_7
       rect:
         serializedVersion: 2
-        x: 224
-        y: 148
+        x: 64
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -239,62 +311,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ddae6575e8004ff0800000000000000
-      internalID: -54033413917725231
+      spriteID: 03724fd0dfe5442c0800000000000000
+      internalID: -4448326090981365968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI-Sprites_5
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 148
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ecbe6b42f172e0cc0800000000000000
-      internalID: -3743011225584866354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI-Sprites_6
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 148
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8b76a85f335336730800000000000000
-      internalID: 3991092192059484088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI-Sprites_7
+      name: stars_sheet_8
       rect:
         serializedVersion: 2
         x: 96
-        y: 116
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -305,18 +333,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef9f8eba110265b10800000000000000
-      internalID: 1969797147291875838
+      spriteID: 845584f3865d9f2e0800000000000000
+      internalID: -2091405908221864632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI-Sprites_8
+      name: stars_sheet_9
       rect:
         serializedVersion: 2
         x: 128
-        y: 116
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -327,106 +355,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd2238403563e9a30800000000000000
-      internalID: 4223873230705992415
+      spriteID: 00b90a370ca04f910800000000000000
+      internalID: 1870131566955502336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI-Sprites_9
+      name: stars_sheet_10
       rect:
         serializedVersion: 2
-        x: 160
-        y: 116
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a9662142056867690800000000000000
-      internalID: -7604743242007812454
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI-Sprites_10
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 116
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 78f4048c908841400800000000000000
-      internalID: 294009451281665927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI-Sprites_11
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 116
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2e9103cf0f396d680800000000000000
-      internalID: -8730628164378682910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI-Sprites_12
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 116
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 19ce5cf7f4f551910800000000000000
-      internalID: 1807455620509854865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI-Sprites_13
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 84
+        x: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -437,18 +377,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caa00a5044b0de34a9d0787ece098d36
-      internalID: 1245671926
+      spriteID: 5f1ebdef99fe28f469e91ccdf0d2337f
+      internalID: -2697192427842512584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI-Sprites_14
+      name: stars_sheet_11
       rect:
         serializedVersion: 2
-        x: 288
-        y: 84
+        x: 32
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -459,18 +399,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 283ac2fe7e1cc044f98bdbb012a4f3cd
-      internalID: 40915119
+      spriteID: a224605c8d3ac0d44b993e89a455dcbf
+      internalID: 3410508736253744503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI-Sprites_15
+      name: stars_sheet_12
       rect:
         serializedVersion: 2
-        x: 224
-        y: 52
+        x: 64
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -481,18 +421,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56b851d41668e1f40b54c9c2b5655af1
-      internalID: 992784107
+      spriteID: f153f8266c5e6794bae3bd0ff3f83549
+      internalID: -6071779801869733367
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI-Sprites_16
+      name: stars_sheet_13
       rect:
         serializedVersion: 2
-        x: 288
-        y: 52
+        x: 96
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -503,18 +443,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e35af5887da1c5246a2f835935d4baf6
-      internalID: -1638393204
+      spriteID: 60700f36c1c21e4498aad4bdcd224414
+      internalID: 6293520097095454439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI-Sprites_17
+      name: stars_sheet_14
       rect:
         serializedVersion: 2
-        x: 288
-        y: 20
+        x: 128
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -525,8 +465,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ece5fdf2f12a0b04f8239da66786b2a4
-      internalID: -1865644316
+      spriteID: e1837604c8d62b144b91b790a138a871
+      internalID: -4332348379799192590
       vertices: []
       indices: 
       edges: []
@@ -535,7 +475,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2ebd2730595037b4dbf327d25b787586
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -545,24 +485,21 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UI-Sprites_0: -5985859897263423718
-      UI-Sprites_1: 3443897719889064933
-      UI-Sprites_10: 294009451281665927
-      UI-Sprites_11: -8730628164378682910
-      UI-Sprites_12: 1807455620509854865
-      UI-Sprites_13: 1245671926
-      UI-Sprites_14: 40915119
-      UI-Sprites_15: 992784107
-      UI-Sprites_16: -1638393204
-      UI-Sprites_17: -1865644316
-      UI-Sprites_2: 2248187200630164148
-      UI-Sprites_3: 8681782458404323373
-      UI-Sprites_4: -54033413917725231
-      UI-Sprites_5: -3743011225584866354
-      UI-Sprites_6: 3991092192059484088
-      UI-Sprites_7: 1969797147291875838
-      UI-Sprites_8: 4223873230705992415
-      UI-Sprites_9: -7604743242007812454
+      stars_sheet_0: -3880783548999385479
+      stars_sheet_1: -4209174555596082298
+      stars_sheet_10: -2697192427842512584
+      stars_sheet_11: 3410508736253744503
+      stars_sheet_12: -6071779801869733367
+      stars_sheet_13: 6293520097095454439
+      stars_sheet_14: -4332348379799192590
+      stars_sheet_2: 5680138253481413215
+      stars_sheet_3: 6432777346895321713
+      stars_sheet_4: 8795387877306836529
+      stars_sheet_5: 2829920081962616566
+      stars_sheet_6: -4798756009285604454
+      stars_sheet_7: -4448326090981365968
+      stars_sheet_8: -2091405908221864632
+      stars_sheet_9: 1870131566955502336
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
