@@ -29,6 +29,7 @@ public class DistanceManager : MonoBehaviour
     void Start()
     {
         totalDistance = GameData.Instance.GetDistance();
+        totalDistanceLastFrame = totalDistance;
     }
 
     private void Update()

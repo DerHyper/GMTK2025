@@ -177,15 +177,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sfxParent: {fileID: 1175050793982938276}
   swingJump: {fileID: 8300000, guid: e51361f95162d0a409b05693cb7b7712, type: 3}
-  swingJumpVolume: 1
+  swingJumpVolume: 0.5
   swingGood: {fileID: 8300000, guid: b33dcfc8965261c4f87b5b9ffa99c191, type: 3}
-  swingGoodVolume: 1
+  swingGoodVolume: 0.5
   swingCrit: {fileID: 8300000, guid: b33dcfc8965261c4f87b5b9ffa99c191, type: 3}
-  swingCritVolume: 1
+  swingCritVolume: 0.6
   star: {fileID: 8300000, guid: 0fd7fc763467c9c4da6e507507a81730, type: 3}
-  starVolume: 1
+  starVolume: 0.5
   meteor: {fileID: 8300000, guid: 614a8991cace0ae48815ca328079e338, type: 3}
-  meteorVolume: 1
+  meteorVolume: 0.7
   fuleOut: {fileID: 0}
   fuleOutVolume: 1
   click: {fileID: 0}
@@ -198,7 +198,7 @@ MonoBehaviour:
   intoMusic: {fileID: 8300000, guid: 5116a504990e902429ef159741c07e98, type: 3}
   intoMusicVolume: 1
   swingingMusic: {fileID: 8300000, guid: 8fcb9ae8212db5b4fa70e345a5105592, type: 3}
-  swingingMusicVolume: 1
+  swingingMusicVolume: 0.8
   flyingMusic: {fileID: 8300000, guid: dcf09dab7552b664383fd669c3e62b21, type: 3}
   flyingMusicVolume: 1
   outroMusic: {fileID: 8300000, guid: 5116a504990e902429ef159741c07e98, type: 3}

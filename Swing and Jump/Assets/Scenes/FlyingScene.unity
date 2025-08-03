@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fule: 20
-  distance: 0
+  distance: 900
 --- !u!1 &134155744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,7 +1812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalDistance: 0
   totalDistanceLastFrame: 0
-  goalDistance: 3500
+  goalDistance: 3000
   distancePerSecond: 10
   distanceUI: {fileID: 1538490385}
   goalReached: 0
