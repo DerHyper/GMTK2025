@@ -447,7 +447,7 @@ TextureImporter:
       name: UI-Sprites_14
       rect:
         serializedVersion: 2
-        x: 288
+        x: 256
         y: 84
         width: 32
         height: 32
@@ -469,8 +469,8 @@ TextureImporter:
       name: UI-Sprites_15
       rect:
         serializedVersion: 2
-        x: 224
-        y: 52
+        x: 288
+        y: 84
         width: 32
         height: 32
       alignment: 0
@@ -491,7 +491,7 @@ TextureImporter:
       name: UI-Sprites_16
       rect:
         serializedVersion: 2
-        x: 288
+        x: 224
         y: 52
         width: 32
         height: 32
@@ -514,7 +514,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 20
+        y: 52
         width: 32
         height: 32
       alignment: 0
@@ -527,6 +527,50 @@ TextureImporter:
       bones: []
       spriteID: ece5fdf2f12a0b04f8239da66786b2a4
       internalID: -1865644316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Sprites_18
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 20
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db77b038b45b8c043ba7f3befc37128f
+      internalID: -729502582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Sprites_19
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 20
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478aa1e6101df28459c2b04870efc650
+      internalID: 1024070179
       vertices: []
       indices: 
       edges: []
@@ -555,6 +599,8 @@ TextureImporter:
       UI-Sprites_15: 992784107
       UI-Sprites_16: -1638393204
       UI-Sprites_17: -1865644316
+      UI-Sprites_18: -729502582
+      UI-Sprites_19: 1024070179
       UI-Sprites_2: 2248187200630164148
       UI-Sprites_3: 8681782458404323373
       UI-Sprites_4: -54033413917725231
