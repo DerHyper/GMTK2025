@@ -12,9 +12,13 @@ public class MySceneManager : MonoBehaviour
     private const string FLYING_SCENE = "FlyingScene";
     [SerializeField]
     private const string SWING_SCENE = "SwingScene";
+    private const string END_SCENE = "EndScene";
+    private const string START_SCENE = "StartScene";
     public Animator transition;
     public float transitionTime = 1;
     private string currentScene = SWING_SCENE;
+    private bool gameEnded = false;
+    
 
     private void Awake()
     {
@@ -26,6 +30,8 @@ public class MySceneManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        currentScene = SceneManager.GetActiveScene().name;
     }
 
     public void StartFlyingScene()
@@ -36,11 +42,19 @@ public class MySceneManager : MonoBehaviour
     IEnumerator StartFadeIn()
     {
         yield return new WaitForSeconds(transitionTime);
-        transition.SetTrigger("StartFadeIn");
+        transition.SetTrigger("StartFadeIn"); // Also loads next Scene
     }
 
     public void LoadNextScene()
     {
+        if (gameEnded)
+        {
+            currentScene = END_SCENE;
+            gameEnded = false;
+            SceneManager.LoadScene(currentScene);
+            return;
+        }
+
         switch (currentScene)
         {
             case FLYING_SCENE:
@@ -49,9 +63,25 @@ public class MySceneManager : MonoBehaviour
             case SWING_SCENE:
                 currentScene = FLYING_SCENE;
                 break;
+            case END_SCENE:
+                currentScene = START_SCENE;
+                break;
+            case START_SCENE:
+                currentScene = SWING_SCENE;
+                break;
             default:
                 break;
         }
         SceneManager.LoadScene(currentScene);
+    }
+
+    internal void StartSwingingScene()
+    {
+        StartCoroutine(StartFadeIn()); 
+    }
+
+    internal void StartEndingScene()
+    {
+        StartCoroutine(StartFadeIn()); 
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -12,6 +13,10 @@ public class GameManager : MonoBehaviour
     private GameObject girlSittingSprite;
     [SerializeField]
     private GameObject girlStartingPrefab;
+    [SerializeField]
+    private Animator girlFlyingAnimator;
+    [SerializeField]
+    private FlyingController flyingController;
 
     public enum GameState
     {
@@ -33,6 +38,8 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+
+
     }
 
     public void ChangeState(GameState newState)
@@ -55,11 +62,16 @@ public class GameManager : MonoBehaviour
 
     public void StopFlying()
     {
-        throw new NotImplementedException();
+        flyingController.StopFlying();
+        girlFlyingAnimator.SetTrigger("Crash");
+        GameData.Instance.SetDistance(DistanceManager.Instance.totalDistance);
+        MySceneManager.Instance.StartSwingingScene();
     }
 
     public void StartGameEnd()
     {
-        throw new NotImplementedException();
+        flyingController.StopFlying();
+        GameData.Instance.SetDistance(DistanceManager.Instance.totalDistance);
+        MySceneManager.Instance.StartEndingScene();
     }
 }

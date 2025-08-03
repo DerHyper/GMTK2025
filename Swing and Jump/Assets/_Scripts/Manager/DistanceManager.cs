@@ -14,6 +14,7 @@ public class DistanceManager : MonoBehaviour
     public bool goalReached = false;
     public List<Seight> seights;
     public Transform SeightSpawn;
+    public Transform worldMapMask;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -41,8 +42,7 @@ public class DistanceManager : MonoBehaviour
 
         if (!goalReached && totalDistance >= goalDistance)
         {
-            goalReached = true;
-            GameManager.Instance.StartGameEnd();
+            ReachGoal();
         }
 
         foreach (var seight in seights)
@@ -56,6 +56,12 @@ public class DistanceManager : MonoBehaviour
         totalDistanceLastFrame = totalDistance;
     }
 
+    private void ReachGoal()
+    {
+        goalReached = true;
+        GameManager.Instance.StartGameEnd();
+    }
+
     private void SeightDistanceReached(Seight seight)
     {
         Instantiate(seight.prefab, SeightSpawn.position, Quaternion.identity);
@@ -63,8 +69,13 @@ public class DistanceManager : MonoBehaviour
 
     private void UpdateDistanceUI()
     {
-        int percentDone = (int) Math.Round(totalDistance / goalDistance * 100);
+        // Text
+        int percentDone = (int)Math.Round(totalDistance / goalDistance * 100);
         int clampedPercentDone = Math.Min(percentDone, 100);
         distanceUI.text = clampedPercentDone + "%";
+
+        // Mask
+        worldMapMask.localScale = new(1, totalDistance / goalDistance, 1);
     }
+    
 }

@@ -4,11 +4,12 @@ using UnityEngine.Rendering;
 
 public class FuleManager : MonoBehaviour
 {
-    public float fule = 0;
+    public float fule = 1;
     private float maxFule = 100;
     public float fuleConsume = 1;
     public Transform fuleMask;
     public static FuleManager Instance;
+    private bool isEmpty = false;
 
     private void Awake()
     {
@@ -32,10 +33,16 @@ public class FuleManager : MonoBehaviour
     {
         AddFule(-fuleConsume * Time.deltaTime);
         UpdateFuleMask();
-        if (fule <= 0)
+        if (fule <= 0 && !isEmpty)
         {
-            GameManager.Instance.StopFlying();
+            EndScene();
         }
+    }
+
+    private void EndScene()
+    {
+        isEmpty = true;
+        GameManager.Instance.StopFlying();
     }
 
     private void UpdateFuleMask()
