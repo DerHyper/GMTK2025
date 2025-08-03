@@ -42,8 +42,7 @@ public class DistanceManager : MonoBehaviour
 
         if (!goalReached && totalDistance >= goalDistance)
         {
-            goalReached = true;
-            GameManager.Instance.StartGameEnd();
+            ReachGoal();
         }
 
         foreach (var seight in seights)
@@ -55,6 +54,12 @@ public class DistanceManager : MonoBehaviour
         }
 
         totalDistanceLastFrame = totalDistance;
+    }
+
+    private void ReachGoal()
+    {
+        goalReached = true;
+        GameManager.Instance.StartGameEnd();
     }
 
     private void SeightDistanceReached(Seight seight)

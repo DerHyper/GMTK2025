@@ -64,11 +64,14 @@ public class GameManager : MonoBehaviour
     {
         flyingController.StopFlying();
         girlFlyingAnimator.SetTrigger("Crash");
+        GameData.Instance.SetDistance(DistanceManager.Instance.totalDistance);
         MySceneManager.Instance.StartSwingingScene();
     }
 
     public void StartGameEnd()
     {
-        throw new NotImplementedException();
+        flyingController.StopFlying();
+        GameData.Instance.SetDistance(DistanceManager.Instance.totalDistance);
+        MySceneManager.Instance.StartEndingScene();
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine.Rendering;
 
 public class FuleManager : MonoBehaviour
 {
-    public float fule = 0;
+    public float fule = 1;
     private float maxFule = 100;
     public float fuleConsume = 1;
     public Transform fuleMask;
@@ -35,9 +35,14 @@ public class FuleManager : MonoBehaviour
         UpdateFuleMask();
         if (fule <= 0 && !isEmpty)
         {
-            isEmpty = true;
-            GameManager.Instance.StopFlying();
+            EndScene();
         }
+    }
+
+    private void EndScene()
+    {
+        isEmpty = true;
+        GameManager.Instance.StopFlying();
     }
 
     private void UpdateFuleMask()

@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 297ceb6ad4e12434fb2344fccb83819b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fule: 0
+  fule: 1
   fuleConsume: 1
   fuleMask: {fileID: 2106226695}
 --- !u!1 &53402566
@@ -210,7 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54717369aca000c41b6c496a1c67a452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fule: 1
+  fule: 20
+  distance: 0
 --- !u!1 &134155744
 GameObject:
   m_ObjectHideFlags: 0

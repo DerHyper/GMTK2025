@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameData : MonoBehaviour
 {
     public float fule = 20;
+    [SerializeField]
     private float distance = 0; // KM
     private int stars = 0;
     private int meteors = 0;
@@ -40,6 +41,11 @@ public class GameData : MonoBehaviour
     public void AddDistance(float distance)
     {
         this.distance += distance;
+    }
+
+    public void SetDistance(float distance)
+    {
+        this.distance = distance;
     }
 
     public float GetDistance()
