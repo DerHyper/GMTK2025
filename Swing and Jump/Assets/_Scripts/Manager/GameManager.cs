@@ -52,12 +52,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void StartSwingAfterIntro()
+    {
+        MySceneManager.Instance.StartFadeInInstand();
+        AudioManager.Instance.PlaySwingingMusic();
+    }
+
     internal void startFlying()
     {
         girlSittingSprite.SetActive(false);
         GameObject.Instantiate(girlStartingPrefab, girlSittingSprite.transform.position, girlSittingSprite.transform.rotation);
         swingManager.StartAfterJump();
         AudioManager.Instance.PlaySwingJump();
+        AudioManager.Instance.PlayFlyingMusic();
         MySceneManager.Instance.StartFlyingScene();
     }
 
@@ -67,6 +74,7 @@ public class GameManager : MonoBehaviour
         girlFlyingAnimator.SetTrigger("Crash");
         GameData.Instance.SetDistance(DistanceManager.Instance.totalDistance);
         MySceneManager.Instance.StartSwingingScene();
+        AudioManager.Instance.PlaySwingingMusic();
     }
 
     public void StartGameEnd()
@@ -74,5 +82,6 @@ public class GameManager : MonoBehaviour
         flyingController.StopFlying();
         GameData.Instance.SetDistance(DistanceManager.Instance.totalDistance);
         MySceneManager.Instance.StartEndingScene();
+        AudioManager.Instance.PlayOutroMusic();
     }
 }

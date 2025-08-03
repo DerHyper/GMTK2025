@@ -31,12 +31,14 @@ public class AudioManager : MonoBehaviour
     private bool fadeIn = false;
     private bool fadeOut = false;
     public float fadeAmount = 1; 
-    public AudioClip into;
-    public float intoVolume = 1;
-    public AudioClip swinging;
-    public float swingingVolume = 1;
-    public AudioClip flying;
-    public float flyingVolume = 1;
+    public AudioClip intoMusic;
+    public float intoMusicVolume = 1;
+    public AudioClip swingingMusic;
+    public float swingingMusicVolume = 1;
+    public AudioClip flyingMusic;
+    public float flyingMusicVolume = 1;
+    public AudioClip outroMusic;
+    public float outroMusicVolume = 1;
 
 
     // Pitch
@@ -81,8 +83,11 @@ public class AudioManager : MonoBehaviour
         else if (fadeOut)
         {
             fadeOut = false;
+            fadeIn = true;
+            musicPlayer.Stop();
             musicPlayer.clip = nextMusic;
             currentMusicTargetVolume = nextMusicTargetVolume;
+            musicPlayer.Play();
         }
     }
 
@@ -97,6 +102,26 @@ public class AudioManager : MonoBehaviour
         {
             Instance = this;
         }
+    }
+
+    public void PlayIntroMusic()
+    {
+        PlayMusic(intoMusic, intoMusicVolume);
+    }
+
+    public void PlayOutroMusic()
+    {
+        PlayMusic(outroMusic, outroMusicVolume);
+    }
+
+    public void PlaySwingingMusic()
+    {
+        PlayMusic(swingingMusic, swingingMusicVolume);
+    }
+
+    public void PlayFlyingMusic()
+    {
+        PlayMusic(flyingMusic, flyingMusicVolume);
     }
 
     public void PlayMusic(AudioClip audioClip, float volume)

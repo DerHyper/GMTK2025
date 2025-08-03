@@ -47,7 +47,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -195,12 +195,14 @@ MonoBehaviour:
   currentMusicTargetVolume: 1
   nextMusicTargetVolume: 1
   fadeAmount: 1
-  into: {fileID: 8300000, guid: 5116a504990e902429ef159741c07e98, type: 3}
-  intoVolume: 1
-  swinging: {fileID: 8300000, guid: 8fcb9ae8212db5b4fa70e345a5105592, type: 3}
-  swingingVolume: 1
-  flying: {fileID: 8300000, guid: dcf09dab7552b664383fd669c3e62b21, type: 3}
-  flyingVolume: 1
+  intoMusic: {fileID: 8300000, guid: 5116a504990e902429ef159741c07e98, type: 3}
+  intoMusicVolume: 1
+  swingingMusic: {fileID: 8300000, guid: 8fcb9ae8212db5b4fa70e345a5105592, type: 3}
+  swingingMusicVolume: 1
+  flyingMusic: {fileID: 8300000, guid: dcf09dab7552b664383fd669c3e62b21, type: 3}
+  flyingMusicVolume: 1
+  outroMusic: {fileID: 8300000, guid: 5116a504990e902429ef159741c07e98, type: 3}
+  outroMusicVolume: 1
   pitchIncrease: 0.1
   stdPitch: 1
   swingPitch: 1

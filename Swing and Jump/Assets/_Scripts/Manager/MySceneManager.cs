@@ -1,7 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,7 +16,7 @@ public class MySceneManager : MonoBehaviour
     public float transitionTime = 1;
     private string currentScene = SWING_SCENE;
     private bool gameEnded = false;
-    
+
 
     private void Awake()
     {
@@ -34,6 +32,13 @@ public class MySceneManager : MonoBehaviour
         currentScene = SceneManager.GetActiveScene().name;
     }
 
+    private void Start() {
+        if (currentScene == START_SCENE)
+        {
+            AudioManager.Instance.PlayIntroMusic();
+        }
+    }
+
     public void StartFlyingScene()
     {
         StartCoroutine(StartFadeIn());
@@ -42,6 +47,11 @@ public class MySceneManager : MonoBehaviour
     IEnumerator StartFadeIn()
     {
         yield return new WaitForSeconds(transitionTime);
+        transition.SetTrigger("StartFadeIn"); // Also loads next Scene
+    }
+
+    public void StartFadeInInstand()
+    {
         transition.SetTrigger("StartFadeIn"); // Also loads next Scene
     }
 
@@ -87,6 +97,7 @@ public class MySceneManager : MonoBehaviour
 
     internal void StartEndingScene()
     {
+        gameEnded = true;
         StartCoroutine(StartFadeIn()); 
     }
 }
