@@ -14,6 +14,8 @@ public class AudioManager : MonoBehaviour
     public float swingGoodVolume = 1;
     public AudioClip swingCrit;
     public float swingCritVolume = 1;
+    public AudioClip swingMiss;
+    public float swingMissVolume = 1;
     public AudioClip star;
     public float starVolume = 1;
     public AudioClip meteor;
@@ -138,7 +140,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySwingGood()
     {
-        PlayOnce(swingGood, swingGoodVolume, swingPitch * 0.5f);
+        PlayOnce(swingGood, swingGoodVolume, swingPitch * 0.7f);
         swingPitch += pitchIncrease;
         lastSwingPitch.Start();
     }
@@ -148,6 +150,11 @@ public class AudioManager : MonoBehaviour
         PlayOnce(swingCrit, swingCritVolume, swingPitch);
         swingPitch += pitchIncrease;
         lastSwingPitch.Start();
+    }
+
+    public void PlaySwingMiss()
+    {
+        PlayOnce(swingMiss, swingingMusicVolume, 0.4f);
     }
 
     public void PlayStar()

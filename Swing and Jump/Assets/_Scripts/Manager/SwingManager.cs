@@ -78,6 +78,7 @@ public class SwingManager : MonoBehaviour
         else
         {
             DecreaseSpeed();
+            AudioManager.Instance.PlaySwingMiss();
         }
     }
 
