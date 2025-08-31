@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fule: 1
-  fuleConsume: 1
+  fuleConsume: 2
   fuleMask: {fileID: 2106226695}
 --- !u!1001 &48073311
 PrefabInstance:
