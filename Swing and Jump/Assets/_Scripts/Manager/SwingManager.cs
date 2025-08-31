@@ -72,13 +72,13 @@ public class SwingManager : MonoBehaviour
         if (IsInRange(GetSwingPosition(), GetCritSwingRange()))
         {
             IncreaseSpeedCrit();
-            _barMarker.GetComponent<ParticleEmitter>().EmitParticles(15);
+            _barMarker.GetComponent<ParticleEmitter>().EmitSwingStars(15);
             AudioManager.Instance.PlaySwingCrit();
         }
         else if (IsInRange(GetSwingPosition(), GetGoodSwingRange()))
         {
             IncreaseSpeedGood();
-            _barMarker.GetComponent<ParticleEmitter>().EmitParticles(5);
+            _barMarker.GetComponent<ParticleEmitter>().EmitSwingStars(5);
             AudioManager.Instance.PlaySwingGood();
         }
         else

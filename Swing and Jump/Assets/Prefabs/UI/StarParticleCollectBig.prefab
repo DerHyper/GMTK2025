@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1647267010419838555}
   - component: {fileID: 2801683599869096175}
   m_Layer: 0
-  m_Name: StarParticle
+  m_Name: StarParticleCollectBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
