@@ -32,7 +32,13 @@ public class MySceneManager : MonoBehaviour
         currentScene = SceneManager.GetActiveScene().name;
     }
 
-    private void Start() {
+    private void Start()
+    {
+        SceneLoadRoutine();
+    }
+
+    private void SceneLoadRoutine()
+    {
         if (currentScene == START_SCENE)
         {
             AudioManager.Instance.PlayIntroMusic();
@@ -83,6 +89,7 @@ public class MySceneManager : MonoBehaviour
                 break;
         }
         SceneManager.LoadScene(currentScene);
+        SceneLoadRoutine();
     }
 
     public void StartIntro()
