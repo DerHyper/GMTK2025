@@ -6,7 +6,9 @@ public class GameData : MonoBehaviour
     public float fule = 20;
     [SerializeField]
     private float distance = 0; // KM
+    [SerializeField]
     private int stars = 0;
+    [SerializeField]
     private int meteors = 0;
 
     public static GameData Instance;
