@@ -49,6 +49,10 @@ public class SwingManager : MonoBehaviour
             LerpToTargetSpeed();
             AddDrag();
         }
+        if (_SwingPositionTimer.IsRunning() && !_afterJump)
+        {
+            UIManager.Instance.UpdateFuelUI(GetFule());
+        }
     }
 
     private void UpdateMarkerView()
@@ -68,11 +72,13 @@ public class SwingManager : MonoBehaviour
         if (IsInRange(GetSwingPosition(), GetCritSwingRange()))
         {
             IncreaseSpeedCrit();
+            _barMarker.GetComponent<ParticleEmitter>().EmitSwingStars(15);
             AudioManager.Instance.PlaySwingCrit();
         }
         else if (IsInRange(GetSwingPosition(), GetGoodSwingRange()))
         {
             IncreaseSpeedGood();
+            _barMarker.GetComponent<ParticleEmitter>().EmitSwingStars(5);
             AudioManager.Instance.PlaySwingGood();
         }
         else
@@ -95,8 +101,13 @@ public class SwingManager : MonoBehaviour
     public void StartAfterJump()
     {
         _afterJump = true;
-        float fule = (_currentSpeed + _currentMaxHeight) * 4 + 15;
+        float fule = GetFule();
         GameData.Instance.SetFule(fule);
+    }
+
+    public float GetFule()
+    {
+        return (_currentSpeed + _currentMaxHeight) * 6 + 5;
     }
 
     private void AddDrag()

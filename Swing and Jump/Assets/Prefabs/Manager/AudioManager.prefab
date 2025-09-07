@@ -182,6 +182,8 @@ MonoBehaviour:
   swingGoodVolume: 0.5
   swingCrit: {fileID: 8300000, guid: b33dcfc8965261c4f87b5b9ffa99c191, type: 3}
   swingCritVolume: 0.6
+  swingMiss: {fileID: 8300000, guid: b33dcfc8965261c4f87b5b9ffa99c191, type: 3}
+  swingMissVolume: 0.5
   star: {fileID: 8300000, guid: 0fd7fc763467c9c4da6e507507a81730, type: 3}
   starVolume: 0.5
   meteor: {fileID: 8300000, guid: 614a8991cace0ae48815ca328079e338, type: 3}

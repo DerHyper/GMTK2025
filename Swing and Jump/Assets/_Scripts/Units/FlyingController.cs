@@ -8,6 +8,7 @@ public class FlyingController : MonoBehaviour
     [SerializeField]
     private float flyingSpeedDistanceModifier = 1;
     private Vector3 _offsetFromCamera = new(0, 0, 1);
+    [SerializeField]
     private float _deadZoneMovement = 0.01f;
     private Vector2 _playZone = new(5, 3);
     private bool canFly = true;
