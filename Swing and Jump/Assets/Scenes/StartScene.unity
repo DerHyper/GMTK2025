@@ -828,6 +828,7 @@ GameObject:
   - component: {fileID: 1086947318}
   - component: {fileID: 1086947317}
   - component: {fileID: 1086947320}
+  - component: {fileID: 1086947321}
   m_Layer: 5
   m_Name: StartScreen
   m_TagString: Untagged
@@ -945,6 +946,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1086947321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086947315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3617330ecd632343bd976465ba74a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1249006746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -993,6 +1006,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2963846088329987147, guid: 8380ee039a051d64cab683a6a64ba04b, type: 3}
+      propertyPath: click
+      value: 
+      objectReference: {fileID: 8300000, guid: 452880120f1308444b954f27115543e1, type: 3}
+    - target: {fileID: 2963846088329987147, guid: 8380ee039a051d64cab683a6a64ba04b, type: 3}
+      propertyPath: photo
+      value: 
+      objectReference: {fileID: 8300000, guid: f1c967721d9ccd043b9f9e7b4e8290ea, type: 3}
     - target: {fileID: 5758996682001318656, guid: 8380ee039a051d64cab683a6a64ba04b, type: 3}
       propertyPath: m_Name
       value: Systems

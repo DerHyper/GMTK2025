@@ -24,6 +24,8 @@ public class AudioManager : MonoBehaviour
     public float fuleOutVolume = 1;
     public AudioClip click;
     public float clickVolume = 1;
+    public AudioClip photo;
+    public float photoVolume = 1;
 
     // Music
     public AudioSource musicPlayer;
@@ -177,6 +179,11 @@ public class AudioManager : MonoBehaviour
     public void PlayClick()
     {
         PlayOnce(click, clickVolume);
+    }
+
+    public void PlayPhoto()
+    {
+        PlayOnce(photo, photoVolume);
     }
 
     public void PlayOnce(AudioClip clip, float volume)
